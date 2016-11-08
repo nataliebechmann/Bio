@@ -1,0 +1,16 @@
+.box{
+    background-color: purple;
+    width: 100%;
+}
+
+.box.medium{
+    height: 200px;
+}
+
+.box.large{
+    height:400px;
+}
+
+.padding.default{
+    padding: 30px;
+}
