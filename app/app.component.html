@@ -1,1 +1,21 @@
-<router-outlet></router-outlet>
+<div class="app container">
+	<div class="ui secondary menu">
+		<a routerLink="" [routerLinkActive]="['active']" class="item">
+            Home
+        </a>
+		<a routerLink="bio" [routerLinkActive]="['active']" class="item">
+            Bio
+        </a>
+		<a routerLink="media" [routerLinkActive]="['active']" class="item">
+            Media
+        </a>
+		<a routerLink="contact" [routerLinkActive]="['active']" class="item">
+            Contact
+        </a>
+	</div>
+
+	<router-outlet></router-outlet>
+
+	<div class="soundcloud player box">
+	</div>
+</div>
