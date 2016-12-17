@@ -21,6 +21,10 @@ export class MusicPlayer implements OnInit {
     @ViewChild('progressBarElement') progressBarElement;
     audioElement: HTMLAudioElement;
 
+    ngOnInit() {
+        this.loadTrack(0);
+    }
+
     activeTrack() {
         return this.tracks[this.currentTrackState.index];
     }
@@ -30,13 +34,8 @@ export class MusicPlayer implements OnInit {
         playbackPercent: 0
     }
 
-    ngOnInit() {
-        this.loadTrack(0);
-    }
-
     loadTrack(index: number) {
         var self = this;
-
         var shouldAutoPlay = false;
 
         if (this.audioElement != null) {
@@ -49,6 +48,15 @@ export class MusicPlayer implements OnInit {
         this.audioElement.ontimeupdate = function (event: Event) {
             self.updatePlaybackPercent((self.audioElement.currentTime / self.audioElement.duration) * 100)
         }
+        this.audioElement.onended = function (event: Event) {
+            var shouldPlayNextTrack = self.canGoNext();
+            self.next();
+
+            if (shouldPlayNextTrack) {
+                self.play();
+            }
+        }
+
         if (shouldAutoPlay) {
             this.play();
         }
@@ -95,7 +103,8 @@ export class MusicPlayer implements OnInit {
 
     setCurrentTimeByPercentage(percentage: number) {
         if (this.audioElement != null) {
-            this.audioElement.currentTime = this.audioElement.duration / 100 * percentage;
+            var time = this.audioElement.duration / 100 * percentage;
+            this.audioElement.currentTime = !isNaN(time) ? time : 0;
             this.updatePlaybackPercent(percentage);
         }
     }

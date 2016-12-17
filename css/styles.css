@@ -1,3 +1,7 @@
+.body{
+    background: #EEEEF2;
+}
+
 .box{
     background-color: purple;
     width: 100%;
@@ -20,16 +24,30 @@
     bottom: 0;
     left: 0;
     right: 0;
-    height: 41px;
+    height: 47px;
     width: 100%;
+    background-color: rgba(255,255,255,.8);
+    box-shadow: 3px 3px 45px 0px rgba(0,0,0,.3);
+    -webkit-box-shadow: 3px 3px 45px 0px rgba(0,0,0,.3);
+    -moz-box-shadow: 3px 3px 45px 0px rgba(0,0,0,.3);
 }
 
-.music.player .icon{
-    margin: 0 !important;
+.music.player .play-pause.button{
+    background-image: url(../media/20161102_170639690_iOS.jpg);
+    background-size: cover;
+}
+
+.music.player a[hidden]{
+    display:none;
 }
 
 .music.player .progress {
     cursor: pointer;
+    border-radius: 0 !important;
+}
+
+.music.player h4, .music.player p{
+    line-height: 32px;
 }
 
 .music.player .bar {
@@ -37,7 +55,7 @@
 }
 
 .app.container{
-    padding-bottom: 41px;
+    padding-bottom: 47px;
 }
 
 img.hero{

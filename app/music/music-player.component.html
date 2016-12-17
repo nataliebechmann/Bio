@@ -1,28 +1,37 @@
-<div class="music player" style="background-color:silver;">
-    <div #progressBarElement class="ui top attached blue progress" (click)="onProgressBarClick($event)">
+<div class="music player">
+    <div #progressBarElement class="ui top attached black progress" (click)="onProgressBarClick($event)">
         <div class="bar" [style.width]="currentTrackState.playbackPercent + '%'"></div>
     </div>
 
     <div class="small padding">
         <div style="float:left">
-            <div class="ui compact blue icon buttons">
-                <a (click)="previous()" class="ui button" [class.disabled]="!canGoPrevious()">
+            <a (click)="play()" class="circular black ui icon play-pause button" [hidden]="!audioElement.paused">
+                <i class="play icon"></i>
+            </a>
+            <a (click)="pause()" class="circular black ui icon play-pause button" [hidden]="audioElement.paused">
+                <i class="pause icon"></i>
+            </a>
+        </div>
+
+        <!-- right side -->
+        <div style="float:right">
+            <div class="ui black icon buttons">
+                <a (click)="previous()" class="ui icon button" [class.disabled]="!canGoPrevious()">
                     <i class="step backward icon"></i>
                 </a>
-                <a (click)="play()" class="ui button" [class.disabled]="!audioElement.paused">
-                    <i class="play icon"></i>
-                </a>
-                <a (click)="pause()" class="ui button" [class.disabled]="audioElement.paused">
-                    <i class="pause icon"></i>
-                </a>
-                <a (click)="next()" class="ui button" [class.disabled]="!canGoNext()">
+                <a (click)="next()" class="ui icon button" [class.disabled]="!canGoNext()">
                     <i class="step forward icon"></i>
                 </a>
             </div>
         </div>
+        <div style="float:right;margin-right:10px;">
+            <p>
+                Now playing: {{currentTrackState.index + 1}} / {{tracks.length}}
+            </p>
+        </div>
 
         <div style="float:left;margin-left:10px">
-            <h3 style="line-height: 27px;">{{activeTrack().title}}</h3>
+            <h4>{{activeTrack().title}}</h4>
         </div>
     </div>
 </div>

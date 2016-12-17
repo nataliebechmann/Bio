@@ -1,20 +1,21 @@
 <div class="app container">
-    <div class="ui secondary menu">
-        <a routerLink="" [routerLinkActive]="['active']" class="item">
-            Home
-        </a>
-        <a routerLink="bio" [routerLinkActive]="['active']" class="item">
-            Bio
-        </a>
-        <a routerLink="media" [routerLinkActive]="['active']" class="item">
-            Media
-        </a>
-        <a routerLink="contact" [routerLinkActive]="['active']" class="item">
-            Contact
-        </a>
+
+    <div class="small padding">
+        <div class="ui secondary menu">
+            <a routerLink="" [routerLinkActive]="['active']" class="item">
+                Home
+            </a>
+            <a routerLink="bio" [routerLinkActive]="['active']" class="item">
+                Bio
+            </a>
+            <a routerLink="media" [routerLinkActive]="['active']" class="item">
+                Media
+            </a>
+            <a routerLink="contact" [routerLinkActive]="['active']" class="item">
+                Contact
+            </a>
+        </div>
     </div>
-
     <router-outlet></router-outlet>
-
     <music-player></music-player>
 </div>
