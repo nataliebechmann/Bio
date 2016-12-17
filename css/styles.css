@@ -8,22 +8,47 @@
 }
 
 .padding.default{
-    padding: 30px;
+    padding: 15px;
 }
 
-.soundcloud.player{
+.padding.small {
+    padding:5px;
+}
+
+.music.player{
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
-    height: 100px;
+    height: 41px;
     width: 100%;
 }
 
+.music.player .icon{
+    margin: 0 !important;
+}
+
+.music.player .progress {
+    cursor: pointer;
+}
+
+.music.player .bar {
+    min-width:0px;
+}
+
 .app.container{
-    padding-bottom: 140px;
+    padding-bottom: 41px;
 }
 
 img.hero{
     width: 100%;
+}
+
+.hero {
+    max-height:300px;
+    overflow: hidden;
+}
+
+.hero img{
+    max-width:100%;
 }

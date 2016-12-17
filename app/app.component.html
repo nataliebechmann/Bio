@@ -1,20 +1,20 @@
 <div class="app container">
-	<div class="ui secondary menu">
-		<a routerLink="" [routerLinkActive]="['active']" class="item">
+    <div class="ui secondary menu">
+        <a routerLink="" [routerLinkActive]="['active']" class="item">
             Home
         </a>
-		<a routerLink="bio" [routerLinkActive]="['active']" class="item">
+        <a routerLink="bio" [routerLinkActive]="['active']" class="item">
             Bio
         </a>
-		<a routerLink="media" [routerLinkActive]="['active']" class="item">
+        <a routerLink="media" [routerLinkActive]="['active']" class="item">
             Media
         </a>
-		<a routerLink="contact" [routerLinkActive]="['active']" class="item">
+        <a routerLink="contact" [routerLinkActive]="['active']" class="item">
             Contact
         </a>
-	</div>
+    </div>
 
-	<router-outlet></router-outlet>
+    <router-outlet></router-outlet>
 
-	<iframe class="soundcloud player" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/62539539&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+    <music-player></music-player>
 </div>

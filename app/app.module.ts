@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { BioComponent } from './bio/bio.component';
 import { MediaComponent } from './media/media.component';
+import { MusicPlayer } from './music/music-player.component';
 
 @NgModule({
 	imports: [
@@ -18,7 +19,8 @@ import { MediaComponent } from './media/media.component';
 		HomeComponent,
 		ContactComponent,
 		BioComponent,
-		MediaComponent
+		MediaComponent,
+		MusicPlayer
 	],
 	bootstrap: [AppComponent]
 })
