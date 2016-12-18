@@ -11,7 +11,7 @@ gulp.task('clean', function () {
     ]).pipe(clean());
 });
 
-gulp.task('default', ['dependencies', 'ts', 'sass', 'html', 'index']);
+gulp.task('default', ['dependencies', 'ts', 'sass', 'html', 'index', 'media']);
 
 gulp.task('watch', ['watch.ts', 'sass:watch', 'html:watch']);
 
@@ -112,5 +112,24 @@ gulp.task('index:clean', function () {
     return gulp.src([
         './wwwroot/index.html',
         './wwroot/systemjs.config.js'
+    ]).pipe(clean());
+})
+
+// media
+gulp.task('media', ['media:clean'], function () {
+    return gulp.src([
+        './media/**/*.*'
+    ]).pipe(gulp.dest('./wwwroot/media'));
+})
+
+gulp.task('media:watch', function () {
+    gulp.watch([
+        './media/**/*.*'
+    ], ['index']);
+});
+
+gulp.task('media:clean', function () {
+    return gulp.src([
+        './wwwroot/media'
     ]).pipe(clean());
 })
