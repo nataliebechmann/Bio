@@ -23,13 +23,13 @@ gulp.task('watch.ts', ['ts'], function () {
 
 // sass
 gulp.task('sass', ["sass:clean"], function () {
-    return gulp.src('./app/sass/**/*.scss')
+    return gulp.src('./sass/**/*.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('./wwwroot/css'));
 });
 
 gulp.task('sass:watch', function () {
-    gulp.watch('./app/sass/**/*.scss', ['sass']);
+    gulp.watch('./sass/**/*.scss', ['sass']);
 });
 
 gulp.task('sass:clean', function(){
