@@ -6,7 +6,8 @@ import { Component } from '@angular/core';
 })
 
 export class HomeComponent {
-    infoItems: any[] = [
+    infoItems: any[] =
+    [
         {
             title: "item 1",
             description: "asdfasdfsaf"

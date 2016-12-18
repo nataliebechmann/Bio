@@ -1,46 +1,44 @@
 ﻿$music-player-height: 47px;
 
-.body{
-    background: #EEEEF2;
+body {
+    background: #fafafa !important;
 }
 
-.box{
+.box {
     background-color: purple;
     width: 100%;
 }
 
-.box.medium{
+.box.medium {
     height: 200px;
 }
 
-.padding.default{
+.padding.default {
     padding: 15px;
 }
 
 .padding.small {
-    padding:5px;
+    padding: 5px;
 }
 
-.music.player{
+.music.player {
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
     height: $music-player-height;
     width: 100%;
-    background-color: rgba(255,255,255,.8);
+    background-color: rgba(255,255,255,.9);
     box-shadow: 3px 3px 45px 0px rgba(0,0,0,.3);
-    -webkit-box-shadow: 3px 3px 45px 0px rgba(0,0,0,.3);
-    -moz-box-shadow: 3px 3px 45px 0px rgba(0,0,0,.3);
 }
 
-.music.player .play-pause.button{
+.music.player .play-pause.button {
     background-image: url(../media/20161102_170639690_iOS.jpg);
     background-size: cover;
 }
 
-.music.player a[hidden]{
-    display:none;
+.music.player a[hidden] {
+    display: none;
 }
 
 .music.player .progress {
@@ -48,27 +46,98 @@
     border-radius: 0 !important;
 }
 
-.music.player h4, .music.player p{
+.music.player h4, .music.player p {
     line-height: 32px;
 }
 
 .music.player .bar {
-    min-width:0px;
+    min-width: 0px;
 }
 
-.app.container{
+.app.container {
     padding-bottom: $music-player-height;
 }
 
-img.hero{
-    width: 100%;
-}
-
 .hero {
-    max-height:300px;
+    max-height: 300px;
     overflow: hidden;
 }
 
-.hero img{
-    max-width:100%;
+.hero img {
+    max-width: 100%;
+}
+
+
+/* ============================================================
+  PARALLEX
+============================================================ */
+
+$image-height-small: 270px;
+$image-height-medium: 400px;
+$image-height-large: 520px;
+
+section.module:last-child {
+    margin-bottom: 0;
+}
+
+section.module p:last-child {
+    margin-bottom: 0;
+}
+
+section.module.content {
+    padding: 40px 0;
+    box-shadow: 3px 3px 45px 15px rgba(0, 0, 0, 0.6);
+    min-height: 250px;
+}
+
+section.module.parallax {
+    height: $image-height-small;
+    background-position: 50% 0%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+section.module.parallax h1 {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 48px;
+    line-height: $image-height-small;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+section.module.parallax-1 {
+    background-image: url('../media/FullSizeRender 2.jpg');
+}
+
+section.module.parallax-2 {
+    background-image: url('../media/FullSizeRender 6.jpg');
+}
+
+section.module.parallax-3 {
+    background-image: url('../media/FullSizeRender 8.jpg');
+}
+
+@media all and (min-width: 600px) {
+    section.module.parallax h1 {
+        font-size: 96px;
+        line-height: $image-height-medium;
+    }
+
+    section.module.parallax {
+        height: $image-height-medium;
+    }
+}
+
+@media all and (min-width: 960px) {
+    section.module.parallax h1 {
+        font-size: 160px;
+        line-height: $image-height-large;
+    }
+
+    section.module.parallax {
+        height: $image-height-large;
+    }
 }
