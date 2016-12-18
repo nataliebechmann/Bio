@@ -300,7 +300,4 @@ build/
 **/*.mp3
 
 # dependencies and compiled output
-**/wwwroot/libs/**
-**/wwwroot/app/**
-**/wwwroot/html/**
-**/wwwroot/css/**
+**/wwwroot

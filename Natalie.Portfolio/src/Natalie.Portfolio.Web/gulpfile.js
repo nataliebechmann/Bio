@@ -7,13 +7,11 @@ var sass = require('gulp-sass');
 // Delete the dist directory
 gulp.task('clean', function () {
     return gulp.src([
-        './wwwroot/app',
-        './wwwroot/libs',
-        './wwwroot/css'
+        './wwwroot'
     ]).pipe(clean());
 });
 
-gulp.task('default', ['dependencies', 'ts', 'sass', 'html']);
+gulp.task('default', ['dependencies', 'ts', 'sass', 'html', 'index']);
 
 gulp.task('watch', ['watch.ts', 'sass:watch', 'html:watch']);
 
@@ -93,4 +91,26 @@ gulp.task("dependencies", ['dependencies:clean'], () => {
 
 gulp.task('dependencies:clean', function(){
     return gulp.src('./wwwroot/libs').pipe(clean());
+})
+
+// index
+gulp.task('index', ['index:clean'], function () {
+    return gulp.src([
+        './app/index.html',
+        './app/systemjs.config.js'
+    ]).pipe(gulp.dest('./wwwroot'));
+})
+
+gulp.task('index:watch', function () {
+    gulp.watch([
+        './app/index.html',
+        './app/systemjs.config.js'
+    ], ['index']);
+});
+
+gulp.task('index:clean', function () {
+    return gulp.src([
+        './wwwroot/index.html',
+        './wwroot/systemjs.config.js'
+    ]).pipe(clean());
 })

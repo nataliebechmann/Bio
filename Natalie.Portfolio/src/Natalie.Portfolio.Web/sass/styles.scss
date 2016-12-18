@@ -1,4 +1,6 @@
-﻿.body{
+﻿$music-player-height: 47px;
+
+.body{
     background: #EEEEF2;
 }
 
@@ -24,7 +26,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    height: 47px;
+    height: $music-player-height;
     width: 100%;
     background-color: rgba(255,255,255,.8);
     box-shadow: 3px 3px 45px 0px rgba(0,0,0,.3);
@@ -55,7 +57,7 @@
 }
 
 .app.container{
-    padding-bottom: 47px;
+    padding-bottom: $music-player-height;
 }
 
 img.hero{
