@@ -294,6 +294,7 @@ build/
 
 **/node_modules
 **/app/**/*.js
+!**/app/systemjs.config.js
 **/app/**/*.js.map
 
 # Music
