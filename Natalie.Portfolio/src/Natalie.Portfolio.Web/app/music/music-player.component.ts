@@ -6,7 +6,7 @@ import { ITrack } from './track';
     templateUrl: './app/music/music-player.component.html'
 })
 
-export class MusicPlayer implements OnInit {
+export class MusicPlayerComponent implements OnInit {
     tracks: ITrack[] = [
         {
             title: "Benga - Yellow",

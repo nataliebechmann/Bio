@@ -1,33 +1,98 @@
 <div class="default padding">
-    <div *ngFor="let experienceCollection of experienceCollections">
-        <h4 class="ui horizontal divider header">
-            <i class="users icon"></i> {{experience.name}}
-        </h4>
-        <table class="ui striped table">
-            <thead>
-                <tr>
-                    <th>Year</th>
-                    <th>Name</th>
-                    <th>Performances</th>
-                    <th>Repertoire</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let experienceItem of experienceCollection.experiences">
-                    <td>{{experienceItem.year}}</td>
-                    <td>{{experienceItem.name}}</td>
-                    <td>{{experienceItem.performances}}</td>
-                    <td>
-                        <ul>
-                            <li *ngFor="let piece of experienceItem.pieces">
-                                {{piece.repertoire}} <i>{{piece.pieceName}}</i>
-                            </li>
-                        </ul>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <br />
-        <br />
-    </div>
+
+    <h4 class="ui horizontal divider header">
+        <i class="users icon"></i> Upcoming
+    </h4>
+    <table class="ui striped table">
+        <thead>
+            <tr>
+                <th>Year</th>
+                <th>Name</th>
+                <th>Performances</th>
+                <th>Repertoire</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>2017</td>
+                <td>RNCM 40 Cellos</td>
+                <td>Strings Festival 2016</td>
+                <td>
+                    <ul>
+                        <li>
+                            Tallis, <i>Spem in Alium</i>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h4 class="ui horizontal divider header">
+        <i class="users icon"></i> Something
+    </h4>
+    <table class="ui striped table">
+        <thead>
+            <tr>
+                <th>Year</th>
+                <th>Name</th>
+                <th>Performances</th>
+                <th>Repertoire</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>2017</td>
+                <td>RNCM 40 Cellos</td>
+                <td>Strings Festival 2016</td>
+                <td>
+                    <ul>
+                        <li>
+                            Tallis, <i>Spem in Alium</i>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h4 class="ui horizontal divider header">
+        <i class="users icon"></i> Chamber Music 
+    </h4>
+    <table class="ui striped table">
+        <thead>
+            <tr>
+                <th>Year</th>
+                <th>Name</th>
+                <th>Performances</th>
+                <th>Repertoire</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>2016</td>
+                <td>Arc Piano Trio</td>
+                <td></td>
+                <td>
+                    <ul>
+                        <li>
+                            Beetoven, <i>Piano Trio in D major</i>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>2016</td>
+                <td>Trillo Cello Trio</td>
+                <td></td>
+                <td>
+                    <ul>
+                        <li>
+                            Pop and Classical crossovers
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </div>
