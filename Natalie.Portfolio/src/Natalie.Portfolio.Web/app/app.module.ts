@@ -6,8 +6,7 @@ import { AppRoutes } from './app.routes';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { BioComponent } from './bio/bio.component';
-import { MediaComponent } from './media/media.component';
-import { SoundcloudPlayerComponent } from './music/soundcloud-player.component';
+import { ExperienceComponent } from './experience/experience.component';
 
 @NgModule({
 	imports: [
@@ -19,8 +18,7 @@ import { SoundcloudPlayerComponent } from './music/soundcloud-player.component';
 		HomeComponent,
 		ContactComponent,
 		BioComponent,
-		MediaComponent,
-		SoundcloudPlayerComponent
+		ExperienceComponent
 	],
 	bootstrap: [AppComponent]
 })

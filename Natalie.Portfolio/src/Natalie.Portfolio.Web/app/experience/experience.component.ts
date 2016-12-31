@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
     selector: 'media',
-    templateUrl: './app/media/media.component.html',
+    templateUrl: './app/experience/experience.component.html',
     styles: [
         `
             table{
@@ -12,4 +12,4 @@ import { Component } from '@angular/core';
     ]
 })
 
-export class MediaComponent { }
+export class ExperienceComponent { }
