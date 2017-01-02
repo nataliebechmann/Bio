@@ -72,9 +72,9 @@ body {
   PARALLEX
 ============================================================ */
 
-$image-height-small: 270px;
-$image-height-medium: 400px;
-$image-height-large: 520px;
+$image-height-small: 170px;
+$image-height-medium: 300px;
+$image-height-large: 420px;
 
 section.module:last-child {
     margin-bottom: 0;
@@ -108,18 +108,6 @@ section.module.parallax h1 {
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-section.module.parallax-1 {
-    background-image: url('../media/FullSizeRender 2.jpg');
-}
-
-section.module.parallax-2 {
-    background-image: url('../media/FullSizeRender 6.jpg');
-}
-
-section.module.parallax-3 {
-    background-image: url('../media/FullSizeRender 8.jpg');
-}
-
 @media all and (min-width: 600px) {
     section.module.parallax h1 {
         font-size: 96px;
@@ -140,4 +128,8 @@ section.module.parallax-3 {
     section.module.parallax {
         height: $image-height-large;
     }
+}
+
+textarea{
+    resize:none !important;
 }
