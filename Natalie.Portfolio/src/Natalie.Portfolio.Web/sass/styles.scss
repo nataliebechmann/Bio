@@ -72,9 +72,13 @@ body {
   PARALLEX
 ============================================================ */
 
-$image-height-small: 170px;
-$image-height-medium: 300px;
-$image-height-large: 420px;
+$image-height-small: 120px;
+$image-height-medium: 170px;
+$image-height-large: 250px;
+
+$image-fontsize-small: 28px;
+$image-fontsize-medium: 56px;
+$image-fontsize-large: 95px;
 
 section.module:last-child {
     margin-bottom: 0;
@@ -100,7 +104,7 @@ section.module.parallax {
 
 section.module.parallax h1 {
     color: rgba(255, 255, 255, 0.8);
-    font-size: 48px;
+    font-size: $image-fontsize-small;
     line-height: $image-height-small;
     font-weight: 700;
     text-align: center;
@@ -110,7 +114,7 @@ section.module.parallax h1 {
 
 @media all and (min-width: 600px) {
     section.module.parallax h1 {
-        font-size: 96px;
+        font-size: $image-fontsize-medium;
         line-height: $image-height-medium;
     }
 
@@ -121,7 +125,7 @@ section.module.parallax h1 {
 
 @media all and (min-width: 960px) {
     section.module.parallax h1 {
-        font-size: 160px;
+        font-size: $image-fontsize-large;
         line-height: $image-height-large;
     }
 
